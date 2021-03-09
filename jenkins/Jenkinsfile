@@ -15,7 +15,6 @@ pipeline {
                 cleanWs()
               }
             }
-    }
         }
         stage('Test') {
             steps {
