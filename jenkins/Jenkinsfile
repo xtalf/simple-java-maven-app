@@ -10,6 +10,12 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
+            post { 
+              always { 
+                cleanWs()
+              }
+            }
+    }
         }
         stage('Test') {
             steps {
